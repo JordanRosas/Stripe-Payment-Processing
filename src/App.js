@@ -4,9 +4,9 @@ import './App.css';
 import StripeCheckout from 'react-stripe-checkout'
 function App() {
   const [product, setProduct] = useState({
-    name:"Telefriend Video Chat Minutes",
+    name:"Product Description",
     price: 10,
-    productBy:"Telefriend"
+    productBy:"Company"
   })
 
   const makePayment = token => {
@@ -45,11 +45,11 @@ function App() {
 
         </a>
         <StripeCheckout 
-          stripeKey="pk_test_51HFVOJIfXEGU7Vl4erUxgFtp1L2emkiIqSC5shYrdyHxOS0GOvlBYpEB1tUybgIAeEEiGwEzWBs9m2HlmgEYEsd300Zv3svbQs"
+          stripeKey="pk_test_"
           token={makePayment}
-          name="Buy $10 Video Chat"
+          name="Buy Product"
           amount={product.price *  100}>
-            <button className="btn-large pink">Buy 10 Minute Video Chat For ${product.price}</button>
+            <button className="btn-large pink">Buy X for ${product.price}</button>
           </StripeCheckout>
       </header>
     </div>
